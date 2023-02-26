@@ -72,3 +72,13 @@ Once a page is followed, the b32 address and nice name are added to the i2p loca
 The main page for the user's experience will use cards to display a link to unique webtorrents created by that user.  
 
 The bottom of the page will include a chat system managed by hypercore protocol.
+
+
+## Backend Operations
+On system startup, the I2P and IPFS daemons are started. A browser page pointing to the individual's main page is loaded.
+
+In the background, Hypercore protocol looks to establish peers. WebTorrent or the I2P built-in Torrent client hosts the individual's torrents.
+
+I2P must be configured to not share quite so much bandwidth in the beginning. This is to keep it useful for folks with off-the-shelf routers.
+
+Every 24 hours, the Hypercore protocol will delete the chat history.
